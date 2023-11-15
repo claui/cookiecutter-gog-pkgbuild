@@ -1,0 +1,9 @@
+{
+  "game_title": "",
+  "game_slug_snakecase": "{{ cookiecutter.game_title.lower().replace(' ', '_').replace('-', '_') }}",
+  "game_slug": "{{ cookiecutter.game_slug_snakecase.replace('_', '-') }}",
+  "pkgname": "gog-{{ cookiecutter.game_slug }}",
+  "game_description": "",
+  "pkgver": "VERSION",
+  "pkgbuild_maintainer": ""
+}

@@ -1,0 +1,8 @@
+/.vscode/
+/src
+/pkg
+*.log
+*.pkg.*
+*.tar.*
+*.zip
+{{ cookiecutter.game_slug }}_*.sh

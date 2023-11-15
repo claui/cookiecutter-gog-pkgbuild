@@ -1,0 +1,8 @@
+{
+  "recommendations": [
+    "claui.packaging",
+    "davidanson.vscode-markdownlint",
+    "editorconfig.editorconfig",
+    "samuelcolvin.jinjahtml"
+  ]
+}

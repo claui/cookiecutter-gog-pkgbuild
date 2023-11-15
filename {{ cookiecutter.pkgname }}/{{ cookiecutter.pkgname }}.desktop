@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name={{ cookiecutter.game_title }}
+Comment={{ cookiecutter.game_description }}
+Exec={{ cookiecutter.game_slug }}
+Icon={{ cookiecutter.pkgname }}
+Type=Application
+Terminal=false
+StartupNotify=true
+Categories=Game;
+Encoding=UTF-8
