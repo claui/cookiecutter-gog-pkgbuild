@@ -40,8 +40,8 @@ pkgver() {
 }
 
 prepare() {
-  # Remove unneeded 32-bit executable
-  # Fixes false alarm in rebuild-detector
+  # Remove unneeded 32-bit binaries
+  # Fixes false alarms in rebuild-detector
   rm -rfv "${srcdir}/data/noarch/support/yad/32"
 }
 
