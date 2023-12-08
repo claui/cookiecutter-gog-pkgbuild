@@ -59,7 +59,7 @@ package() {
   echo >&2 'Packaging game data'
   mkdir -p "${pkgdir}/opt/${_shortname}"
   cp -R --preserve=mode \
-    "${srcdir}"/{data,meta,scripts} \
+    "${srcdir}"/data/noarch/* \
     "${pkgdir}/opt/${_shortname}"
 
   echo >&2 'Packaging launcher'
