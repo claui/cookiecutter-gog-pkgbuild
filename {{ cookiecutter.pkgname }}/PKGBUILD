@@ -7,7 +7,7 @@ pkgdesc='{{ cookiecutter.game_description }}. GOG version.'
 _shortname="${pkgname#gog-}"
 arch=('x86_64')
 url="https://www.gog.com/en/game/${_shortname//-/_}"
-license=('custom')
+license=('LicenseRef-eula')
 depends=(
   'bash'
   'cairo'
