@@ -4,6 +4,6 @@
   "game_slug": "{{ cookiecutter.game_slug_snakecase.replace('_', '-') }}",
   "pkgname": "gog-{{ cookiecutter.game_slug }}",
   "game_description": "",
-  "pkgver": "VERSION",
+  "pkgver": "1.2.3.45678",
   "pkgbuild_maintainer": ""
 }
