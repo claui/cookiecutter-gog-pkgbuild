@@ -29,7 +29,7 @@ _gog_id=''
 {% endif -%}
 
 source=(
-  "${_shortname}_${pkgver%.*}_(${pkgver##*.})::gogdownloader://{% if cookiecutter.has_demo_version == "y" -%}${_gog_id}{%- else -%}${_shortname//-/_}{%- endif %}/en3installer0"
+  "${_shortname}_${pkgver%.*}_(${pkgver##*.}).sh::gogdownloader://{% if cookiecutter.has_demo_version == "y" -%}${_gog_id}{%- else -%}${_shortname//-/_}{%- endif %}/en3installer0"
   "${pkgname}.desktop"
   "${_shortname}.bash"
 )
