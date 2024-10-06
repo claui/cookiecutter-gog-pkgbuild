@@ -19,7 +19,7 @@ depends=(
   'pango'
 )
 makedepends=('lgogdownloader')
-options=('!strip')
+options=('!debug' '!strip')
 
 {% if cookiecutter.has_demo_version == "y" -%}
 # Need to hard-code the ID because lgogdownloader would force a
