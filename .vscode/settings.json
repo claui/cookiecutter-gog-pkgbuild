@@ -6,6 +6,7 @@
     "editor.defaultFormatter": "vscode.json-language-features"
   },
   "files.associations": {
+    "**/?? cookiecutter.pkgname ??/LICENSE": "jinja",
     "**/?? cookiecutter.pkgname ??/PKGBUILD": "jinja-shell",
     "**/?? cookiecutter.pkgname ??/*.bash": "jinja-shell",
     "**/?? cookiecutter.pkgname ??/*.desktop": "jinja-properties"
