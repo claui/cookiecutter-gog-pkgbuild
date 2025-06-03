@@ -6,10 +6,12 @@
     "editor.defaultFormatter": "vscode.json-language-features"
   },
   "files.associations": {
+    "**/?? cookiecutter.pkgname ??/.nvchecker.toml": "jinja-toml",
     "**/?? cookiecutter.pkgname ??/LICENSE": "jinja",
     "**/?? cookiecutter.pkgname ??/PKGBUILD": "jinja-shell",
     "**/?? cookiecutter.pkgname ??/*.bash": "jinja-shell",
-    "**/?? cookiecutter.pkgname ??/*.desktop": "jinja-properties"
+    "**/?? cookiecutter.pkgname ??/*.desktop": "jinja-properties",
+    "**/hooks/*_gen_project.py": "jinja-py"
   },
   "files.exclude": {
     "**/.git": true

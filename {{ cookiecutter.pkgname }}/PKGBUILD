@@ -25,12 +25,12 @@ options=('!debug' '!strip')
 # Need to hard-code the ID because lgogdownloader would force a
 # prompt whenever we attempt to download `{{ cookiecutter.game_slug_snakecase }}` while
 # our GOG account also owns `{{ cookiecutter.game_slug_snakecase }}_demo`
-_gog_id=''
+_gog_id='{{ cookiecutter.gog_product_id }}'
 
 {% endif -%}
 
 source=(
-  "${_shortname}_${pkgver%.*}_(${pkgver##*.}).sh::gogdownloader://{% if cookiecutter.has_demo_version == "y" -%}${_gog_id}{%- else -%}${_shortname//-/_}{%- endif %}/en3installer0"
+  "${_shortname}_${pkgver//./_}.sh::gogdownloader://{% if cookiecutter.has_demo_version == "y" -%}${_gog_id}{%- else -%}${_shortname//-/_}{%- endif %}/en3installer0"
   "${pkgname}.desktop"
   "${_shortname}.bash"
 )
@@ -45,6 +45,11 @@ DLAGENTS+=('gogdownloader::/usr/bin/lgogdownloader --download-file=%u -o %o')
 PKGEXT=.pkg.tar
 
 prepare() {
+  # Assert that pkgver matches the downloaded version
+  diff -u \
+    --label 'Expected version' <(echo "${pkgver}") \
+    --label 'Actual version' <(awk 'NR==2' data/noarch/gameinfo)
+
   # Work around glibc 2.41 execstack issue
   # See also: https://sourceware.org/bugzilla/show_bug.cgi?id=32653
   find "${srcdir}"/data/noarch/game -name 'libfmod*.so' -exec \

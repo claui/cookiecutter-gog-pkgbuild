@@ -1,10 +1,12 @@
 {
-  "game_title": "",
-  "game_slug_snakecase": "{{ cookiecutter.game_title.lower().replace(' ', '_').replace('-', '_') }}",
-  "game_slug": "{{ cookiecutter.game_slug_snakecase.replace('_', '-') }}",
+  "gog_product_id": "",
+  "game_slug_snakecase": "{{ cookiecutter.gog_product_id | gog_metadata | attr('slug') }}",
+  "game_slug": "{{ cookiecutter.game_slug_snakecase | replace('_', '-') }}",
   "pkgname": "gog-{{ cookiecutter.game_slug }}",
   "game_description": "",
-  "pkgver": "1.2.3.45678",
   "has_demo_version": "n",
-  "pkgbuild_maintainer": ""
+  "pkgbuild_maintainer": "",
+  "_extensions": [
+    "local_extensions.GogDbExtension"
+  ]
 }
