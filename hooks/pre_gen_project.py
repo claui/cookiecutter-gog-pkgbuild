@@ -7,9 +7,15 @@
     cookiecutter.update({
         "game_title": metadata.title,
         "pkgver": metadata.dl_installer
-            | selectattr("os", "equalto", "linux")
+            | selectattr("os", "equalto", cookiecutter.os)
             | first
             | attr("version"),
+        "installer": metadata.dl_installer
+            | selectattr("os", "equalto", cookiecutter.os)
+            | first
+            | attr("files")
+            | first
+            | attr("id"),
     })
 }}
 """

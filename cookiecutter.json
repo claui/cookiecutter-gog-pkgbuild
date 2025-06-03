@@ -4,6 +4,10 @@
   "game_slug": "{{ cookiecutter.game_slug_snakecase | replace('_', '-') }}",
   "pkgname": "gog-{{ cookiecutter.game_slug }}",
   "game_description": "",
+  "os": [
+    "linux",
+    "windows"
+  ],
   "pkgbuild_maintainer": "",
   "_extensions": [
     "local_extensions.GogDbExtension"

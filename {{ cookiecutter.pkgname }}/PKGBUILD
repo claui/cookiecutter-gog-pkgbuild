@@ -22,7 +22,7 @@ makedepends=('lgogdownloader')
 options=('!debug' '!strip')
 
 source=(
-  "${_shortname}_${pkgver//./_}.sh::gogdownloader://${_shortname//-/_}/en3installer0"
+  "${_shortname}_${pkgver//./_}.sh::gogdownloader://${_shortname//-/_}/{{ cookiecutter.installer }}"
   "${pkgname}.desktop"
   "${_shortname}.bash"
 )
