@@ -4,7 +4,6 @@
   "game_slug": "{{ cookiecutter.game_slug_snakecase | replace('_', '-') }}",
   "pkgname": "gog-{{ cookiecutter.game_slug }}",
   "game_description": "",
-  "has_demo_version": "n",
   "pkgbuild_maintainer": "",
   "_extensions": [
     "local_extensions.GogDbExtension"
