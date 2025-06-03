@@ -18,7 +18,7 @@ depends=(
   'gtk2'
   'pango'
 )
-makedepends=('execstack' 'lgogdownloader')
+makedepends=('lgogdownloader')
 options=('!debug' '!strip')
 
 source=(
@@ -41,11 +41,6 @@ prepare() {
   diff -u \
     --label 'Expected version' <(echo "${pkgver}") \
     --label 'Actual version' <(awk 'NR==2' data/noarch/gameinfo)
-
-  # Work around glibc 2.41 execstack issue
-  # See also: https://sourceware.org/bugzilla/show_bug.cgi?id=32653
-  find "${srcdir}"/data/noarch/game -name 'libfmod*.so' -exec \
-    execstack -c '{}' +
 
   # Remove unneeded 32-bit executable
   # Fixes false alarm in rebuild-detector
