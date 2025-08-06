@@ -9,6 +9,7 @@
     "**/?? cookiecutter.pkgname ??/.nvchecker.toml": "jinja-toml",
     "**/?? cookiecutter.pkgname ??/LICENSE": "jinja",
     "**/?? cookiecutter.pkgname ??/PKGBUILD": "jinja-shell",
+    "**/?? cookiecutter.pkgname ??/REUSE.toml": "jinja-toml",
     "**/?? cookiecutter.pkgname ??/*.bash": "jinja-shell",
     "**/?? cookiecutter.pkgname ??/*.desktop": "jinja-properties",
     "**/hooks/*_gen_project.py": "jinja-py"
