@@ -1,3 +1,6 @@
+# SPDX-FileCopyrightText: Claudia Pellegrino
+# SPDX-License-Identifier: 0BSD
+
 """Local extension to download metadata from gogdb.org."""
 
 import json

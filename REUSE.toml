@@ -1,0 +1,20 @@
+# https://reuse.software/spec-3.3/
+
+version = 1
+
+[[annotations]]
+path = [
+    "**/.editorconfig",
+    "**/.gitattributes",
+    "**/.gitignore",
+    "**/.vscode/**",
+    "{{ cookiecutter.pkgname }}/*.desktop",
+    "{{ cookiecutter.pkgname }}/.nvchecker.toml",
+    "{{ cookiecutter.pkgname }}/PKGBUILD",
+    "{{ cookiecutter.pkgname }}/{{ cookiecutter.game_slug }}.bash",
+    "cookiecutter.json",
+    "README.md",
+]
+precedence = "override"
+SPDX-FileCopyrightText = "Claudia Pellegrino"
+SPDX-License-Identifier = "0BSD"

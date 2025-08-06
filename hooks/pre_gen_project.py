@@ -1,3 +1,6 @@
+# SPDX-FileCopyrightText: Claudia Pellegrino
+# SPDX-License-Identifier: 0BSD
+
 """
 {# Cache and reuse metadata to avoid unnecessary gogdb.org requests #}
 {%
