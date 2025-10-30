@@ -8,16 +8,7 @@ _shortname="${pkgname#gog-}"
 arch=('x86_64')
 url="https://www.gog.com/en/game/${_shortname//-/_}"
 license=('LicenseRef-eula')
-depends=(
-  'bash'
-  'cairo'
-  'gcc-libs'
-  'gdk-pixbuf2'
-  'glib2'
-  'glibc'
-  'gtk2'
-  'pango'
-)
+depends=('bash' 'gcc-libs' 'glibc' 'zlib')
 makedepends=('lgogdownloader')
 options=('!debug' '!strip')
 
@@ -42,9 +33,8 @@ prepare() {
     --label 'Expected version' <(echo "${pkgver}") \
     --label 'Actual version' <(awk 'NR==2' data/noarch/gameinfo)
 
-  # Remove unneeded 32-bit executable
-  # Fixes false alarm in rebuild-detector
-  rm -rfv "${srcdir}/data/noarch/support/yad/32"
+  # Remove unneeded executables
+  rm -rfv "${srcdir}/data/noarch/support/yad"
 }
 
 package() {
